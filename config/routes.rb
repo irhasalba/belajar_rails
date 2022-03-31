@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root "contacts#index"
+  resources :contacts
+  get "/contact/detail/:id", to: "contacts#show"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+
+
 end
